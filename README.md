@@ -126,7 +126,7 @@ The scripts should be run in the following order:
    python LASSO.py CALiSol-23_Dataset_cleaned_data_with_descriptors.csv SMILES_dict.txt
    python LASSO_features_order.py lasso_features.txt SMILES_dict.txt
    ```
-   These scripts perform LASSO feature selection and visualize the importance of selected features.
+   These scripts perform LASSO feature selection and visualize the importance of selected features. Through LASSO dimensionality reduction and Pearson correlation analysis for feature extraction, we can obtain lasso_features_P.txt
 
 10. **LASSO Feature Selection (Double)**:
     ```bash
