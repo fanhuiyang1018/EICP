@@ -10,7 +10,6 @@ This repository contains a suite of Python scripts designed to process, analyze,
 - [Running the Scripts](#running-the-scripts)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -146,7 +145,3 @@ To use this repository, follow these steps:
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
