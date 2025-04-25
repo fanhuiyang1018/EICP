@@ -1,0 +1,10 @@
+T: 0.643
+EState_VSA5_mean: 0.314
+PEOE_VSA8_mean: 0.295
+SMR_VSA6_mean: 0.198
+NumAtomStereoCenters_mean: -0.348
+PEOE_VSA7_mean: -0.344
+PEOE_VSA1_mean: -0.279
+FpDensityMorgan3_mean: -0.269
+fr_lactone_mean: -0.244
+c: -0.094
