@@ -17,9 +17,10 @@ This repository contains a suite of Python scripts designed to process, analyze,
 The scripts in this repository perform the following tasks:
 1. **Data Cleaning and Grouping**: Divide the dataset into groups based on specific criteria and clean the data.
 2. **Feature Extraction**: Calculate molecular descriptors using RDKit.
-3. **Model Training**: Train a neural network model to predict ionic conductivity.
+3. **Model Training**: Train neural network models to predict ionic conductivity.
 4. **Model Evaluation**: Evaluate the model's performance and visualize results.
 5. **Random Search for Solvent Ratios**: Perform a random search to find the best solvent ratios for maximizing ionic conductivity.
+6. **LASSO Feature Selection**: Select important features using LASSO regression and visualize their importance.
 
 ## Dependencies
 
@@ -57,6 +58,10 @@ electrolyte_conductivity/
 ├── combined_script_LP.py
 ├── plot_mslf_total.py
 ├── random_search_solvents.py
+├── RdKit_LASSO_S.py
+├── LASSO.py
+├── LASSO_features_order.py
+├── RdKit_LASSO_D.py
 ├── output/
 ├── figures/
 └── README.md
@@ -114,6 +119,22 @@ The scripts should be run in the following order:
    ```
    This script performs a random search to find the best solvent ratios for maximizing ionic conductivity.
 
+9. **LASSO Feature Selection (Single)**:
+   ```bash
+   python RdKit_LASSO_S.py CALiSol-23_Dataset_cleaned_data.csv SMILES_dict.txt
+   python LASSO.py CALiSol-23_Dataset_cleaned_data_with_descriptors.csv SMILES_dict.txt
+   python LASSO_features_order.py lasso_features.txt SMILES_dict.txt
+   ```
+   These scripts perform LASSO feature selection and visualize the importance of selected features.
+
+10. **LASSO Feature Selection (Double)**:
+    ```bash
+    python RdKit_LASSO_D.py CALiSol-23_Dataset_cleaned_data.csv SMILES_dict.txt
+    python LASSO.py CALiSol-23_Dataset_cleaned_data_with_descriptors.csv SMILES_dict.txt
+    python LASSO_features_order.py lasso_features.txt SMILES_dict.txt
+    ```
+    These scripts perform LASSO feature selection with double descriptors and visualize the importance of selected features.
+
 ## Usage
 
 To use this repository, follow these steps:
@@ -132,13 +153,3 @@ Contributions are welcome! Please open an issue or submit a pull request if you 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-### Notes:
-1. **Directory Structure**: The directory structure is based on your provided files and running order. Adjust it according to your actual project setup.
-2. **Dependencies**: Ensure all necessary libraries are installed. If there are additional dependencies, add them to the `pip install` command.
-3. **Running Order**: The scripts are listed in the exact order you provided.
-4. **Usage Guide**: A simple guide is provided to help users get started quickly.
-
-You can save this `README.md` file to the root directory of your project and further refine it as needed.
