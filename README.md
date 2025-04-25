@@ -17,10 +17,11 @@ This repository contains a suite of Python scripts designed to process, analyze,
 The scripts in this repository perform the following tasks:
 1. **Data Cleaning and Grouping**: Divide the dataset into groups based on specific criteria and clean the data.
 2. **Feature Extraction**: Calculate molecular descriptors using RDKit.
-3. **Model Training**: Train neural network models to predict ionic conductivity.
-4. **Model Evaluation**: Evaluate the model's performance and visualize results.
-5. **Random Search for Solvent Ratios**: Perform a random search to find the best solvent ratios for maximizing ionic conductivity.
-6. **LASSO Feature Selection**: Select important features using LASSO regression and visualize their importance.
+3. **LASSO Feature Selection**: Select important features using LASSO regression and visualize their importance.
+4. **Model Training**: Train neural network models to predict ionic conductivity.
+5. **Model Evaluation**: Evaluate the model's performance and visualize results.
+6. **Random Search for Solvent Ratios**: Perform a random search to find the best solvent ratios for maximizing ionic conductivity.
+
 
 ## Dependencies
 
