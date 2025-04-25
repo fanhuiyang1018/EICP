@@ -139,11 +139,7 @@ The scripts should be run in the following order:
 ## Usage
 
 To use this repository, follow these steps:
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/electrolyte_conductivity.git
-   cd electrolyte_conductivity
-   ```
+1. Clone the repository.
 2. Install the dependencies.
 3. Run the scripts in the specified order.
 
