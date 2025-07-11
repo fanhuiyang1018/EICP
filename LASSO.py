@@ -152,7 +152,7 @@ def plot_correlation(correlation_matrix, important_features, output_image):
         legend=False
     )
     
-    plt.ylabel('Pearson Correlation Coefficient', fontsize=24, fontname='Times New Roman', fontweight='bold')
+    plt.ylabel('Correlation Coefficient', fontsize=24, fontname='Times New Roman', fontweight='bold')
     plt.xlabel('')
     plt.xticks(rotation=45, fontsize=20, fontname='Times New Roman', fontweight='bold', ha='right')
     plt.yticks(fontsize=24, fontname='Times New Roman')
