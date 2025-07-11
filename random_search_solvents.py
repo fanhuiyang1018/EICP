@@ -59,8 +59,7 @@ def generate_random_solvent_ratios(solvents, max_solvents=5):
 
     num_solvents = random.randint(1, min(len(solvents), max_solvents))
     selected_solvents = random.sample(solvents, num_solvents)
-    ratios = np.random.rand(num_solvents)
-    ratios /= ratios.sum()  # Normalize to ensure the sum of ratios is 1
+    ratios = np.random.dirichlet(np.ones(num_solvents), size=1)[0]  # Dirichlet sampling
     return dict(zip(selected_solvents, ratios))
 
 def evaluate_solvent_ratios(ratios, model, scaler, lasso_features, data):
@@ -91,7 +90,7 @@ def evaluate_solvent_ratios(ratios, model, scaler, lasso_features, data):
     
     return predicted_k
 
-def random_search(input_file, max_iterations=10, max_solvents=5):
+def random_search(input_file, max_iterations=600000, max_solvents=5):
     """
     Perform a random search for the best solvent ratios.
     
@@ -164,7 +163,7 @@ def random_search(input_file, max_iterations=10, max_solvents=5):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: python random_search_solvents.py example_data.csv 50")
+        print("Usage: python random_search_solvents.py example_data.csv 600000")
         sys.exit(1)
 
     input_file = sys.argv[1]
