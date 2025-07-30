@@ -163,7 +163,7 @@ def random_search(input_file, max_iterations=600000, max_solvents=5):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: python random_search_solvents.py example_data.csv 600000")
+        print("Usage: python random_search_solvents.py example_data.csv 60000")
         sys.exit(1)
 
     input_file = sys.argv[1]
