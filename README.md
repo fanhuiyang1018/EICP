@@ -56,14 +56,11 @@ electrolyte_conductivity/
 ├── find_bestmodel_LP.py
 ├── LP.py
 ├── combined_script_LP.py
-├── plot_mslf_total.py
 ├── random_search_solvents.py
 ├── RdKit_LASSO_S.py
 ├── LASSO.py
 ├── LASSO_features_order.py
 ├── RdKit_LASSO_D.py
-├── output/
-├── figures/
 └── README.md
 ```
 
@@ -145,3 +142,4 @@ To use this repository, follow these steps:
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or bug fixes.
+
