@@ -56,10 +56,7 @@ electrolyte_conductivity/
 ├── LP.py
 ├── combined_script_LP.py
 ├── random_search_solvents.py
-├── RdKit_LASSO_S.py
-├── LASSO.py
 ├── LASSO_features_order.py
-├── RdKit_LASSO_D.py
 └── README.md
 ```
 
@@ -67,17 +64,17 @@ electrolyte_conductivity/
 
 The scripts should be run in the following order:
 
-1. **Divide Data into Groups**:
-   ```bash
-   python divide_groups.py CALiSol-23_Dataset.csv
-   ```
-   This script groups the data based on specific criteria and saves each group as a separate CSV file.
-
-2. **Clean and Analyze Data**:
+1. **Clean and Analyze Data**:
    ```bash
    python clean_and_analyze_data.py CALiSol-23_Dataset.csv
    ```
    This script cleans the data, removes duplicates, and converts solvent ratios to mole fractions.
+   
+2. **Divide Data into Groups**:
+   ```bash
+   python divide_groups.py CALiSol-23_Dataset.csv
+   ```
+   This script groups the data based on specific criteria and saves each group as a separate CSV file.
 
 3. **Calculate Descriptors**:
    ```bash
@@ -103,33 +100,11 @@ The scripts should be run in the following order:
    ```
    This script combines the data cleaning, feature extraction, and model prediction steps into a single workflow.
 
-7. **Plot MSLF vs Ionic Conductivity**:
+7. **Random Search for Solvent Ratios**:
    ```bash
-   python plot_mslf_total.py output/summary.csv
-   ```
-   This script generates a scatter plot of MSLF vs ionic conductivity.
-
-8. **Random Search for Solvent Ratios**:
-   ```bash
-   python random_search_solvents.py example_data.csv 1000
+   python random_search_solvents.py example_data.csv 100000
    ```
    This script performs a random search to find the best solvent ratios for maximizing ionic conductivity.
-
-9. **LASSO Feature Selection (Single)**:
-   ```bash
-   python RdKit_LASSO_S.py CALiSol-23_Dataset_cleaned_data.csv SMILES_dict.txt
-   python LASSO.py CALiSol-23_Dataset_cleaned_data_with_descriptors.csv SMILES_dict.txt
-   python LASSO_features_order.py lasso_features.txt SMILES_dict.txt
-   ```
-   These scripts perform LASSO feature selection and visualize the importance of selected features. Through LASSO dimensionality reduction and Pearson correlation analysis for feature extraction, we can obtain lasso_features_P.txt
-
-10. **LASSO Feature Selection (Double)**:
-    ```bash
-    python RdKit_LASSO_D.py CALiSol-23_Dataset_cleaned_data.csv SMILES_dict.txt
-    python LASSO.py CALiSol-23_Dataset_cleaned_data_with_descriptors.csv SMILES_dict.txt
-    python LASSO_features_order.py lasso_features.txt SMILES_dict.txt
-    ```
-    These scripts perform LASSO feature selection with double descriptors and visualize the importance of selected features.
 
 ## Usage
 
@@ -141,5 +116,6 @@ To use this repository, follow these steps:
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or bug fixes.
+
 
 
