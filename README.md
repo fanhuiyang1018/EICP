@@ -49,7 +49,6 @@ electrolyte_conductivity/
 ├── CALiSol-23_Dataset.csv
 ├── SMILES_dict.txt
 ├── lasso_features_P.txt
-├── example_data.csv
 ├── divide_groups.py
 ├── clean_and_analyze_data.py
 ├── RdKit_LP.py
@@ -142,4 +141,5 @@ To use this repository, follow these steps:
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or bug fixes.
+
 
